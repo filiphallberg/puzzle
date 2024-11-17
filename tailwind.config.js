@@ -7,6 +7,9 @@ module.exports = {
       fontSize: {
         dynamic: "50cqw",
       },
+      size: {
+        em: "1em",
+      },
     },
   },
   plugins: [

@@ -82,7 +82,7 @@ export default function Puzzle() {
       </div>
       <div className="grid sm:grid-flow-col grid-flow-row gap-2 justify-start px-2">
         <div className="grid grid-flow-col gap-px justify-start">
-          <ArrowLongDownIcon className="h-full p-3 aspect-square bg-gray-100 rounded-sm" />
+          <ArrowLongDownIcon className="size-em box-content p-3 aspect-square bg-gray-100 rounded-sm" />
           <select
             className="py-2 px-4 bg-gray-100 rounded-sm"
             value={config.rows}
@@ -98,7 +98,7 @@ export default function Puzzle() {
           </select>
         </div>
         <div className="grid grid-flow-col gap-px justify-start">
-          <ArrowLongRightIcon className="h-full p-3 aspect-square bg-gray-100 rounded-sm" />
+          <ArrowLongRightIcon className="size-em box-content p-3 aspect-square bg-gray-100 rounded-sm" />
           <select
             className="py-2 px-4 bg-gray-100 rounded-sm"
             value={config.cols}
@@ -120,14 +120,14 @@ export default function Puzzle() {
           className="grid grid-flow-col gap-px justify-end"
         >
           <span className="py-2 px-4 bg-gray-100 rounded-sm">Shuffle</span>
-          <ArrowPathIcon className="h-full p-3 aspect-square bg-gray-100 rounded-sm" />
+          <ArrowPathIcon className="size-em box-content p-3 aspect-square bg-gray-100 rounded-sm" />
         </button>
         <button
           onClick={solve}
           className="grid grid-flow-col gap-px justify-end"
         >
           <span className="py-2 px-4 bg-gray-100 rounded-sm">Solve</span>
-          <CheckIcon className="h-full p-3 aspect-square bg-gray-100 rounded-sm" />
+          <CheckIcon className="size-em box-content p-3 aspect-square bg-gray-100 rounded-sm" />
         </button>
       </div>
     </section>
