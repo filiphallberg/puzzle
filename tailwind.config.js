@@ -10,6 +10,9 @@ module.exports = {
       size: {
         em: "1em",
       },
+      spacing: {
+        full: "100%",
+      },
     },
   },
   plugins: [

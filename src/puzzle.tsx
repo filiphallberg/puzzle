@@ -66,7 +66,7 @@ export default function Puzzle() {
             key={tile}
             data-value={tile}
             data-complete={tile === index + 1}
-            className="group p-px sm:p-1 aspect-square select-none cursor-pointer data-[value=0]:cursor-default container-inline"
+            className="group select-none cursor-pointer data-[value=0]:cursor-default container-inline"
             style={{
               flex: `1 1 ${100 / config.cols}%`,
               opacity: tile,
@@ -74,13 +74,15 @@ export default function Puzzle() {
             onClick={move}
             onKeyDown={move}
           >
-            <div className="w-full text-white justify-center text-dynamic group-focus-within:bg-cyan-700 items-center flex h-full bg-zinc-700 rounded-sm group-data-[complete=true]:bg-green-700">
-              {tile}
+            <div className="w-full pt-full relative box-content">
+              <div className="w-full text-white absolute top-0 left-0 border justify-center text-dynamic group-focus-within:bg-cyan-700 items-center flex h-full bg-zinc-700 rounded-sm group-data-[complete=true]:bg-green-700">
+                {tile}
+              </div>
             </div>
           </div>
         ))}
       </div>
-      <div className="grid sm:grid-flow-col grid-flow-row gap-2 justify-start px-2">
+      <div className="grid sm:grid-flow-col grid-flow-row gap-2 justify-start">
         <div className="grid grid-flow-col gap-px justify-start">
           <ArrowLongDownIcon className="size-em box-content p-3 aspect-square bg-gray-100 rounded-sm" />
           <select
@@ -114,7 +116,7 @@ export default function Puzzle() {
           </select>
         </div>
       </div>
-      <div className="grid sm:grid-flow-col grid-flow-row gap-2 justify-end px-2">
+      <div className="grid sm:grid-flow-col grid-flow-row gap-2 justify-end">
         <button
           onClick={shuffle}
           className="grid grid-flow-col gap-px justify-end"
